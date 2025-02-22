@@ -60,14 +60,13 @@ ol {
   gap: 30px;
   justify-content: center;
   align-items: end;
-  min-width: 1140px;
+  max-width: 1140px;
 }
 
 .result {
   display: grid;
   min-width: 711px;
 } 
-
 
 .search-form {
   display: inherit;
@@ -106,7 +105,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
-  color: #ffffff
+  color: #ffffff;
 }
 
 .search-form__label-text {
@@ -170,10 +169,19 @@ ol {
 
 .search-form__label-text {
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .search-form__label-text:hover {
   text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 /*----------------------------------------------------*/
@@ -247,6 +255,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .content__list-item {
